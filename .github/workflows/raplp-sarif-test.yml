@@ -1,4 +1,4 @@
-name: RAP-LP
+name: RAP-LP-Sarif-test
 on:
   push:
     branches: [main]
