@@ -194,7 +194,7 @@ paths:
         required: false
         schema:
           type: string
-      operationId: exampleRequest
+      operationId: exampleRequest2
       tags:
         - tag1
         - tag2
