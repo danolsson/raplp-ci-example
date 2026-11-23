@@ -14,14 +14,14 @@ info:
     Known limitations: This API is intended for testing only and must not be used in production.
   contact:
     name: RAP-LP
-    email: rap-lp@example.com
+    # email: rap-lp@example.com
     url: http://example.com
   termsOfService: http://swagger.io/terms/
   license:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-  - url: https://example.com/myapi/v2
+  - url: http://example.com/myapi/v2
 paths:
   /api-info:
     get:
@@ -136,7 +136,7 @@ paths:
         '200':
           description: example response
           headers:
-            traceparent: 
+            traceparent:
               schema:
                 type: string
           content:
@@ -194,7 +194,7 @@ paths:
         required: false
         schema:
           type: string
-      operationId: exampleRequest2
+      operationId: exampleRequest
       tags:
         - tag1
         - tag2
@@ -213,9 +213,9 @@ paths:
         '200':
           description: example response
           headers:
-           traceparent:
-            schema:
-              type: string
+            traceparent:
+              schema:
+                type: string
           content:
             application/json:
               schema:
@@ -263,7 +263,7 @@ paths:
   /example3:
     get:
       summary: Example API with Payload in Headers Allowed
-      description: For testing
+      # description: For testing
       parameters:
       - name: traceparent
         in: header
