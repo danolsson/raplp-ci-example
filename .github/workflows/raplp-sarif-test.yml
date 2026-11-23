@@ -33,8 +33,7 @@ jobs:
         # Run from the repo root so SARIF uris are repository-relative
         run: node .raplp/dist/app.js -f ./specifications/sak-example.yaml --sarif sak-example.sarif --strict --minConformance 95
       - name: Upload SARIF
-        # Upload even when RAP-LP fails the criteria, but skip if no report was written
-        if: always() && hashFiles('sak-example.sarif') != ''
+        if: ${{ !cancelled() && hashFiles('sak-example.sarif') != '' }}
         uses: github/codeql-action/upload-sarif@1bd86f2fdb4b86187fa4059f16f31a3202acc9ea # v4.39.4
         with:
           sarif_file: sak-example.sarif
