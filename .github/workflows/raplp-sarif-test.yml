@@ -1,4 +1,4 @@
-name: RAP-LP-Sarif-test
+name: RAP-LP-SARIF-test
 on:
   push:
     branches: [main]
@@ -31,7 +31,7 @@ jobs:
         run: npm ci && npm run build
       - name: Run RAP-LP
         # Run from the repo root so SARIF uris are repository-relative
-        run: node .raplp/dist/app.js -f ./specifications/sak-example.yaml --sarif sak-example.sarif --strict --minConformance 80
+        run: node .raplp/dist/app.js -f ./specifications/sak-example.yaml --sarif sak-example.sarif --strict --minConformance 95
       - name: Upload SARIF
         # Upload even when RAP-LP fails the criteria, but skip if no report was written
         if: always() && hashFiles('sak-example.sarif') != ''
