@@ -18,6 +18,7 @@ info:
     url: https://www.apache.org/licenses/LICENSE-2.0.html
 servers:
   - url: http://example.com/myapi/v2
+  
 paths:
   /api-info:
     get:
@@ -179,6 +180,7 @@ paths:
                 status: 415
                 detail: The request Content-Type must be application/json.
                 instance: https://example.com/problems/instances/12345
+                
   /example2:
     post:
       summary: Example API with Payload in Headers Allowed
@@ -256,6 +258,7 @@ paths:
                 status: 415
                 detail: The request Content-Type must be application/json.
                 instance: https://example.com/problems/instances/12345
+                
   /example3:
     get:
       summary: Example API with Payload in Headers Allowed
