@@ -1,4 +1,4 @@
-name: RAP-LP-SARIF-test
+name: RAP-LP-Validation
 on:
   push:
     branches: [main]
