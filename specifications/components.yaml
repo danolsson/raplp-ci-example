@@ -1,0 +1,15 @@
+parameters:
+  limit:
+    name: limit
+    in: query
+    required: false
+    schema:
+      type: integer
+schemas:
+  Pet:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
