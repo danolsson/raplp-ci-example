@@ -1,4 +1,4 @@
-name: RAP-LP-JUNIT-test
+name: RAP-LP-junit-test
 on:
   push:
     branches: [main]
